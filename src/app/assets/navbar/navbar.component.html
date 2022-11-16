@@ -2,9 +2,14 @@
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">MisionTIC</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Clientes</a></li>
-        <li><a href="badges.html">Encomiendas</a></li>
-        <li><a href="collapsible.html">Servicios</a></li>
+        <li><a href="/admin/get">Clientes</a></li>
+        <li><a href="/encomiendas/get">Encomiendas</a></li>
+        <li><a href="/servicios/get">Servicios</a></li>
+        <li><a href="/servicios/get">Usuarios</a></li>
+        <!-- sesion -->
+        <!-- Sesion -->
+        <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+        <li *ngIf="activeSession"><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
       </ul>
     </div>
   </nav>
